@@ -2,7 +2,7 @@ public class P002AddTwoNumbers {
 
 
     // Definition for singly-linked list.
-    public class ListNode {
+    public static class ListNode {
         int val;
         ListNode next;
 
@@ -28,7 +28,7 @@ public class P002AddTwoNumbers {
 
         ListNode l3Head = null;
 
-        while (n1 != null && n2 != null) {
+        while (n1 != null || n2 != null) {
             int v1 = n1 == null ? 0 : n1.val;
             int v2 = n2 == null ? 0 : n2.val;
 
@@ -55,8 +55,6 @@ public class P002AddTwoNumbers {
             if (n2 != null) {
                 n2 = n2.next;
             }
-
-            l3 = l3.next;
         }
 
         if (carry == 1) {
